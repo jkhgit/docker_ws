@@ -1,16 +1,41 @@
 # docker_ws
 Docker image scripts for various package tests workspace.
 
-### dependencies
-- docker
-
 ### env
-- ubuntu(>= 20.04 LTS)
+- docker (>= 20.10)
+- ubuntu (>= 20.04 LTS)
 
-### build
-how to build:
+### tree
 ```
-$ docker build -t "<custom-image:tag>" "<dir_name>"
+docker_ws/
+  |
+  --- imageA/
+  |     |
+  |     --- Dockerfile
+  |     --- ...
+  |
+  --- imageB/
+  |     |
+  |     --- ...
+
+  ...
+
+  |
+  --- imageX/
+
+  ...
+```
+
+- build: docker build -t "<custom-image:tag>" "<dir_name>"
+```
+# e.g
+$ docker build -t ubuntu:test imageA
+```
+
+- imageX: docker project.
+```
+# You can write a Docker Build Script project yourself,
+# but you can use it as a symbolic link from the outside.
 ```
 
 ### connect
