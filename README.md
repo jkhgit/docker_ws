@@ -14,16 +14,18 @@ docker_ws/
   |     --- Dockerfile
   |     --- ...
   |
-  --- imageB/
+  --- imageX/
   |     |
   |     --- ...
 
   ...
 
   |
-  --- imageX/
-
-  ...
+  --- example/
+        |
+        --- Dockerfile.rst
+        --- docker.preinst
+        --- docker.user
 ```
 
 - build: docker build -t "<custom-image:tag>" "<dir_name>"
@@ -37,6 +39,8 @@ $ docker build -t ubuntu:test imageA
 # You can write a Docker Build Script project yourself,
 # but you can use it as a symbolic link from the outside.
 ```
+
+- example: docker project example.
 
 ### connect
 - E-mail: <jkhpro1003@gmail.com>

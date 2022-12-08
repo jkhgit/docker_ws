@@ -1,0 +1,14 @@
+#!/bin/bash
+
+apt_options="-y --no-install-recommends"
+ppa="ppa:steve.jeong/ppa"
+
+# base install
+apt-get update && apt-get install ${apt_options} \
+  ...
+
+# add repo and target install
+add-apt-repository -y ${ppa}
+apt-get update && apt-get install ${apt_options} \
+  ...
+
