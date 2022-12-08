@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# docker.preinst
+# install packages and any other configs while build docker image.
+# latest date: 2022.12.08
+#
+# written by steve.jeong <jkhpro1003@gmail.com>
+
 apt_options="-y --no-install-recommends"
 ppa="ppa:steve.jeong/ppa"
 

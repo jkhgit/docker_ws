@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# docker.user
+# it is optional.
+# To set up a non-root user separately in docker image.
+# latest date: 2022.12.08
+#
+# written by steve.jeong <jkhpro1003@gmail.com>
+
 id=$1
 
 # set root password
