@@ -12,16 +12,16 @@ ubuntu:20.04
   ENV ID="steve" \
       TZ="Asia/Seoul"
 
-  # timezone set 
+  # timezone set
   RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
   # preinstall & set user account
   WORKDIR /root
-  COPY docker.preinst preinst
+  COPY docker.packages packages
   COPY docker.user user
-  RUN chmod +x preinst user && \
-      ./preinst && ./user $ID
-  RUN rm preinst user
+  RUN chmod +x packages user && \
+      ./packages && ./user $ID
+  RUN rm packages user
 
   # change root to user
   USER $ID
