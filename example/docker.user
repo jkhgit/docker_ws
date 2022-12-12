@@ -3,7 +3,8 @@
 # docker.user
 # it is optional.
 # To set up a non-root user separately in docker image.
-# latest date: 2022.12.08
+# Depends: sudo
+# latest date: 2022.12.12
 #
 # written by steve.jeong <jkhpro1003@gmail.com>
 
@@ -19,6 +20,9 @@ groupadd --gid 1000 ${id} && \
 # --password ${id}
 # password option is just crypted in /etc/shadow.
 # It is not applied to the actual.
+
+# set sudoers
+echo "%$id ALL=(ALL) ALL" >> /etc/sudoers
 
 # set user password
 echo "$id:$id" | chpasswd
