@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# "docker_ws/backups" written by steve.jeong
+# Usage: cd docker_ws && ./backups
+#
+# latest date: 2022.12.21
+
+read -r -p "Input docker user id: " DOCKER_ID_USER
+read -r -p "Input container name: " CONTAINER
+
+IMAGE=${DOCKER_ID_USER}/backups:${CONTAINER}-$(date +%Y%m%d)
+
+echo "IMAGE = ${IMAGE}"
+echo "===================="
+echo "Wait... "
+
+docker commit ${CONTAINER} ${IMAGE}
+docker push ${IMAGE}
