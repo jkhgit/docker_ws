@@ -5,6 +5,7 @@
 #
 # latest date: 2022.12.21
 
+echo "[Warning!] backups registry must be private!"
 read -r -p "Input docker user id: " DOCKER_ID_USER
 read -r -p "Input container name: " CONTAINER
 
