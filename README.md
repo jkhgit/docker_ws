@@ -41,6 +41,7 @@ $ docker build -t ubuntu:test imageA
 ```
 
 - example: docker project example.
+- volumes: need root privilege. soft link "/var/lib/docker/volumes"
 
 ### connect
 - E-mail: <jkhpro1003@gmail.com>
